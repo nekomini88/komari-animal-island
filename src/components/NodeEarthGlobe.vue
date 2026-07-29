@@ -604,10 +604,10 @@ function formatRate(bytesPerSec: number): string {
           <div
             class="relative z-2 bg-background/40 rounded-lg py-0.5 px-1.5 text-xs zoom-80 items-start justify-center text-nowrap ring-1 ring-foreground/[0.06] shadow-sm"
           >
-            <div class="text-green-600 flex flex-row items-center gap-0.5">
+            <div class="text-success flex flex-row items-center gap-0.5">
               <Icon icon="tabler:chevron-up" width="12" height="12" /> {{ formatRate(rateFor(cluster.code).up) }}
             </div>
-            <div class="text-blue-600 flex flex-row items-center gap-0.5">
+            <div class="text-success flex flex-row items-center gap-0.5">
               <Icon icon="tabler:chevron-down" width="12" height="12" /> {{ formatRate(rateFor(cluster.code).down) }}
             </div>
           </div>
@@ -620,16 +620,16 @@ function formatRate(bytesPerSec: number): string {
       class="absolute top-6 md:top-12 left-0 text-[10px] text-muted-foreground pointer-events-none flex gap-2 items-center backdrop-blur-xl backdrop-saturate-150 bg-background/40 rounded-lg px-2.5 py-1 ring-1 ring-foreground/[0.06] shadow-sm"
     >
       <div v-if="onlineServers > 0" class="flex items-center gap-1">
-        <span class="inline-block size-1.5 rounded-full bg-green-600 animate-pulse" />
-        <span class="text-green-600">{{ onlineServers }}</span>
+        <span class="inline-block size-1.5 rounded-full bg-success animate-pulse" />
+        <span class="text-success">{{ onlineServers }}</span>
       </div>
       <div v-if="offlineServers > 0" class="flex items-center gap-1">
         <span class="inline-block size-1.5 rounded-full bg-yellow-600 animate-pulse" />
         <span class="text-yellow-600">{{ offlineServers }}</span>
       </div>
       <!-- <div v-if="totalServers > 0" class="flex items-center gap-1">
-        <span class="inline-block size-1.5 rounded-full bg-blue-600 animate-pulse" />
-        <span class="text-blue-600">{{ totalServers }}</span>
+        <span class="inline-block size-1.5 rounded-full bg-success animate-pulse" />
+        <span class="text-success">{{ totalServers }}</span>
       </div> -->
     </div>
   </div>

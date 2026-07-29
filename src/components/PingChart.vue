@@ -718,7 +718,7 @@ onBeforeUnmount(() => {
         <TabsList class="w-max h-8 backdrop-blur-xl backdrop-saturate-150 bg-background/40 rounded-lg ring-1 ring-foreground/[0.06] shadow-sm">
           <TabsTrigger
             v-for="view in availableViews" :key="view.label" :value="view.label"
-            class="h-6.5 flex-none shrink-0 text-xs border-none data-[state=active]:text-green-600 shadow-none rounded-sm"
+            class="h-6.5 flex-none shrink-0 text-xs border-none data-[state=active]:text-success shadow-none rounded-sm"
           >
             {{ view.label }}
           </TabsTrigger>
@@ -728,14 +728,14 @@ onBeforeUnmount(() => {
       <div class="flex gap-2 items-center">
         <Button
           variant="ghost" size="xs" class="h-7 rounded-lg backdrop-blur-xl backdrop-saturate-150 bg-background/40 hover:bg-background/60 border-none ring-1 ring-foreground/[0.06]"
-          :class="selectedTaskIds.length === tasks.length ? 'shadow-[0_0_0_2px] shadow-green-600/10 text-green-600' : ''"
+          :class="selectedTaskIds.length === tasks.length ? 'shadow-[0_0_0_2px] shadow-success/10 text-success' : ''"
           @click="showAllTasks"
         >
           全选
         </Button>
         <Button
           variant="ghost" size="xs" class="h-7 rounded-lg backdrop-blur-xl backdrop-saturate-150 bg-background/40 hover:bg-background/60 border-none ring-1 ring-foreground/[0.06]"
-          :class="!selectedTaskIds.length && 'shadow-[0_0_0_2px] shadow-green-600/10 text-green-600'"
+          :class="!selectedTaskIds.length && 'shadow-[0_0_0_2px] shadow-success/10 text-success'"
           @click="hideAllTasks"
         >
           全不选
@@ -849,19 +849,19 @@ onBeforeUnmount(() => {
             <div class="flex gap-2 items-center">
               <Button
                 variant="ghost" size="xs" class="h-7 rounded-lg backdrop-blur-xl backdrop-saturate-150 bg-background/40 hover:bg-background/60 border-none ring-1 ring-foreground/[0.06]"
-                :class="showDelay && 'shadow-[0_0_0_2px] shadow-green-600/10 text-green-600'" @click="showDelay = !showDelay"
+                :class="showDelay && 'shadow-[0_0_0_2px] shadow-success/10 text-success'" @click="showDelay = !showDelay"
               >
                 延迟
               </Button>
               <Button
                 variant="ghost" size="xs" class="h-7 rounded-lg backdrop-blur-xl backdrop-saturate-150 bg-background/40 hover:bg-background/60 border-none ring-1 ring-foreground/[0.06]"
-                :class="showLoss && 'shadow-[0_0_0_2px] shadow-green-600/10 text-green-600'" @click="showLoss = !showLoss"
+                :class="showLoss && 'shadow-[0_0_0_2px] shadow-success/10 text-success'" @click="showLoss = !showLoss"
               >
                 丢包
               </Button>
               <Button
                 variant="ghost" size="xs" class="h-7 rounded-lg backdrop-blur-xl backdrop-saturate-150 bg-background/40 hover:bg-background/60 border-none ring-1 ring-foreground/[0.06]"
-                :class="cutPeak && 'shadow-[0_0_0_2px] shadow-green-600/10 text-green-600'" @click="cutPeak = !cutPeak"
+                :class="cutPeak && 'shadow-[0_0_0_2px] shadow-success/10 text-success'" @click="cutPeak = !cutPeak"
               >
                 平滑峰值
               </Button>

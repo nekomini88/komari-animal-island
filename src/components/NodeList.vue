@@ -365,11 +365,11 @@ function filterByTag(tag: string) {
               <!-- 速率 -->
               <div v-else-if="col.key === 'rate'">
                 <div class="text-[10px] flex flex-col ">
-                  <span class="text-green-600 flex flex-row gap-1 items-center">
+                  <span class="text-success flex flex-row gap-1 items-center">
                     <Icon icon="tabler:chevron-up" width="12" height="12" />
                     {{ formatBytesPerSecond(node.net_out ?? 0) }}
                   </span>
-                  <span class="text-blue-600 flex flex-row gap-1 items-center">
+                  <span class="text-success flex flex-row gap-1 items-center">
                     <Icon icon="tabler:chevron-down" width="12" height="12" />
                     {{ formatBytesPerSecond(node.net_in ?? 0) }}
                   </span>
@@ -405,7 +405,7 @@ function filterByTag(tag: string) {
       <button
         v-for="col in mobileSortOptions" :key="col.key" type="button"
         class="shrink-0 h-6 px-2 rounded-md text-[11px] backdrop-blur-xl bg-background/40 ring-1 ring-foreground/[0.06] transition-colors"
-        :class="[sortKey === col.key ? 'text-green-600 bg-background/70' : 'text-muted-foreground']"
+        :class="[sortKey === col.key ? 'text-success bg-background/40' : 'text-muted-foreground']"
         @click="handleSort(col)"
       >
         {{ col.label }}{{ sortKey === col.key ? (sortDir === 1 ? ' ↑' : ' ↓') : '' }}
@@ -451,11 +451,11 @@ function filterByTag(tag: string) {
               <Icon :icon="appStore.isNodePinned(node.uuid) ? 'tabler:star-filled' : 'tabler:star'" width="13" height="13" />
             </button>
             <span class="text-[10px] shrink-0 flex items-center gap-1.5">
-              <span class="text-green-600 flex items-center gap-0.5">
+              <span class="text-success flex items-center gap-0.5">
                 <Icon icon="tabler:chevron-up" width="12" height="12" />
                 {{ formatBytesPerSecond(node.net_out ?? 0) }}
               </span>
-              <span class="text-blue-600 flex items-center gap-0.5">
+              <span class="text-success flex items-center gap-0.5">
                 <Icon icon="tabler:chevron-down" width="12" height="12" />
                 {{ formatBytesPerSecond(node.net_in ?? 0) }}
               </span>

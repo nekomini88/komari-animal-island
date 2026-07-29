@@ -208,7 +208,7 @@ function getNodeItemTransitionStyle(index: number): Record<string, string> {
               <TabsList class="w-max h-8 backdrop-blur-xl backdrop-saturate-150 bg-background/40 rounded-lg ring-1 ring-foreground/[0.06] shadow-sm pointer-events-auto">
                 <TabsTrigger
                   v-for="g in allTabs" :key="g.name" :value="g.name"
-                  class="h-6.5 flex-none shrink-0 text-xs border-none data-[state=active]:text-green-600 shadow-none rounded-sm"
+                  class="h-6.5 flex-none shrink-0 text-xs border-none data-[state=active]:text-success shadow-none rounded-sm"
                 >
                   {{ g.tab }}
                   <span class="text-[10px] opacity-50 -ml-0.5">{{ g.count }}</span>
@@ -219,7 +219,7 @@ function getNodeItemTransitionStyle(index: number): Record<string, string> {
               <Button
                 variant="outline" size="icon" aria-label="卡片视图"
                 class="w-8 h-8 border-none backdrop-blur-xl backdrop-saturate-150 bg-background/40 shadow-none hover:bg-background/60 rounded-lg ring-1 ring-foreground/[0.06]"
-                :class="[appStore.nodeViewMode === 'card' ? '!text-green-600 !bg-background' : '']"
+                :class="[appStore.nodeViewMode === 'card' ? '!text-success !bg-background' : '']"
                 @click="appStore.nodeViewMode = 'card'"
               >
                 <Icon icon="tabler:layout-grid" :width="14" :height="14" />
@@ -227,7 +227,7 @@ function getNodeItemTransitionStyle(index: number): Record<string, string> {
               <Button
                 variant="outline" size="icon" aria-label="列表视图"
                 class="w-8 h-8 border-none backdrop-blur-xl backdrop-saturate-150 bg-background/40 shadow-none hover:bg-background/60 rounded-lg ring-1 ring-foreground/[0.06]"
-                :class="[appStore.nodeViewMode === 'list' ? '!text-green-600 !bg-background' : '']"
+                :class="[appStore.nodeViewMode === 'list' ? '!text-success !bg-background' : '']"
                 @click="appStore.nodeViewMode = 'list'"
               >
                 <Icon icon="tabler:table" :width="14" :height="14" />
@@ -237,7 +237,7 @@ function getNodeItemTransitionStyle(index: number): Record<string, string> {
                 variant="outline" size="icon"
                 :aria-label="appStore.cardDensity === 'compact' ? '切换为舒适密度' : '切换为紧凑密度'"
                 class="w-8 h-8 border-none backdrop-blur-xl backdrop-saturate-150 bg-background/40 shadow-none hover:bg-background/60 rounded-lg ring-1 ring-foreground/[0.06]"
-                :class="[appStore.cardDensity === 'compact' ? '!text-green-600 !bg-background' : '']"
+                :class="[appStore.cardDensity === 'compact' ? '!text-success !bg-background' : '']"
                 @click="appStore.toggleCardDensity()"
               >
                 <Icon :icon="appStore.cardDensity === 'compact' ? 'tabler:baseline-density-small' : 'tabler:baseline-density-medium'" :width="14" :height="14" />
@@ -269,7 +269,7 @@ function getNodeItemTransitionStyle(index: number): Record<string, string> {
             <button
               v-for="opt in NODE_SORT_OPTIONS" :key="opt.key" type="button"
               class="shrink-0 h-6 px-2 rounded-md text-[11px] backdrop-blur-xl bg-background/40 ring-1 ring-foreground/[0.06] transition-colors hover:bg-background/60"
-              :class="[cardSortKey === opt.key ? 'text-green-600 bg-background/70' : 'text-muted-foreground']"
+              :class="[cardSortKey === opt.key ? 'text-success bg-background/40' : 'text-muted-foreground']"
               @click="handleCardSort(opt.key)"
             >
               {{ opt.label }}{{ cardSortKey === opt.key ? (cardSortDir === 1 ? ' ↑' : ' ↓') : '' }}

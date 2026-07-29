@@ -226,7 +226,7 @@ function hasRegion(region: string | null | undefined): boolean {
             </div>
           </div>
           <div
-            class="flex flex-col gap-0.5 p-1 pl-2 rounded-sm bg-slate-500/5 col-span-2"
+            class="flex flex-col gap-0.5 p-1 pl-2 rounded-sm bg-[#f1ead9] col-span-2"
             :class="[!props.node.online ? 'blur-xs opacity-60' : '']"
           >
             <div class="text-[11px] flex flex-col">
@@ -241,7 +241,7 @@ function hasRegion(region: string | null | undefined): boolean {
             </div>
           </div>
           <div
-            class="flex flex-col gap-0.5 p-1 pl-2 rounded-sm bg-slate-500/5"
+            class="flex flex-col gap-0.5 p-1 pl-2 rounded-sm bg-[#f1ead9]"
             :class="[appStore.showNodeConnections ? 'col-span-2' : 'col-span-4', !props.node.online ? 'blur-xs opacity-60' : '']"
           >
             <div class="text-[11px] text-muted-foreground flex flex-col">
@@ -257,7 +257,7 @@ function hasRegion(region: string | null | undefined): boolean {
           </div>
           <div
             v-if="appStore.showNodeConnections"
-            class="flex flex-col gap-0.5 p-1 pl-2 rounded-sm bg-slate-500/5 col-span-2"
+            class="flex flex-col gap-0.5 p-1 pl-2 rounded-sm bg-[#f1ead9] col-span-2"
             :class="[!props.node.online ? 'blur-xs opacity-60' : '']"
           >
             <div class="text-[11px] text-muted-foreground flex flex-col">
@@ -272,7 +272,7 @@ function hasRegion(region: string | null | undefined): boolean {
             </div>
           </div>
           <div
-            v-if="priceTags.length" class="col-span-6 flex flex-row gap-0.5 p-1 pl-2 rounded-sm bg-slate-500/5 justify-center"
+            v-if="priceTags.length" class="col-span-6 flex flex-row gap-0.5 p-1 pl-2 rounded-sm bg-[#f1ead9] justify-center"
             :class="[!props.node.online ? 'blur-xs opacity-60' : '', appStore.showNodeUptime ? 'max-md:col-span-3' : '']"
           >
             <div class="text-[11px] text-muted-foreground flex flex-row gap-3 max-md:gap-1.5 max-md:flex-wrap max-md:justify-center overflow-hidden">
@@ -287,7 +287,7 @@ function hasRegion(region: string | null | undefined): boolean {
           <!-- 在线时长（移动端与价格并排一行，省一行高度） -->
           <div
             v-if="appStore.showNodeUptime"
-            class="col-span-6 flex flex-row gap-2 items-center p-1 rounded-sm bg-slate-500/5 justify-center text-[11px] text-muted-foreground"
+            class="col-span-6 flex flex-row gap-2 items-center p-1 rounded-sm bg-[#f1ead9] justify-center text-[11px] text-muted-foreground"
             :class="[!props.node.online ? 'blur-xs opacity-60' : '', priceTags.length ? 'max-md:col-span-3' : '']"
           >
             <Icon icon="tabler:clock-hour-4" width="12" height="12" />
@@ -295,7 +295,7 @@ function hasRegion(region: string | null | undefined): boolean {
           </div>
           <!-- 延迟 -->
           <div
-            class="group/panel relative col-span-3 flex flex-col gap-1.5 p-1.5 h-10 rounded-sm bg-slate-500/5"
+            class="group/panel relative col-span-3 flex flex-col gap-1.5 p-1.5 h-10 rounded-sm bg-[#f1ead9]"
             :class="[!props.node.online ? 'blur-xs opacity-60' : '']" :title="latencyPanelTooltip"
           >
             <div class="flex items-center justify-between gap-2 text-[11px] leading-none relative">
@@ -308,7 +308,7 @@ function hasRegion(region: string | null | undefined): boolean {
           </div>
           <!-- 丢包 -->
           <div
-            class="group/panel relative col-span-3 flex flex-col gap-1.5 p-1.5 h-10 rounded-sm bg-slate-500/5"
+            class="group/panel relative col-span-3 flex flex-col gap-1.5 p-1.5 h-10 rounded-sm bg-[#f1ead9]"
             :class="[!props.node.online ? 'blur-xs opacity-60' : '']" :title="lossPanelTooltip"
           >
             <div class="flex items-center justify-between gap-2 text-[11px] leading-none">
