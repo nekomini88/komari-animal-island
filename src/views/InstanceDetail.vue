@@ -330,12 +330,12 @@ const trafficProgressStyle = computed(() => ({
       <div class="px-4 grid grid-cols-2 gap-4 lg:grid-cols-4">
         <CardX
           v-for="item in metricCards" :key="item.label" hoverable size="small"
-          class="group h-full backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 transition-all rounded-lg ring-1 ring-foreground/[0.06] shadow-sm glass-hover-blur"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
           content-class="h-full !p-3"
         >
           <div class="flex h-full min-h-10 md:min-h-18 flex-col justify-between gap-3">
             <div class="flex items-center justify-between gap-2">
-              <span class="text-xs font-medium tracking-wider text-muted-foreground">{{ item.label }}</span>
+              <span class="text-xs font-bold tracking-wider text-muted-foreground">{{ item.label }}</span>
               <Icon
                 :icon="item.icon" :width="20" :height="20"
                 class="text-slate-500/25 transition-colors group-hover:text-slate-500"
@@ -359,12 +359,12 @@ const trafficProgressStyle = computed(() => ({
       <div class="px-4 gap-4 grid grid-cols-1 lg:grid-cols-2">
         <CardX
           title="硬件信息" size="small"
-          class="group h-full backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 transition-all rounded-lg ring-1 ring-foreground/[0.06] shadow-sm glass-hover-blur"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
         >
           <div class="gap-3 grid grid-cols-3">
             <div
               v-for="(item, index) in hardwareInfo" :key="item.label"
-              class="min-w-0 flex flex-col gap-1 rounded-sm bg-[#f1ead9] p-2" :class="!index && 'col-span-3'"
+              class="min-w-0 flex flex-col gap-1 rounded-xl bg-[#f1ead9] p-2" :class="!index && 'col-span-3'"
             >
               <div class="flex gap-1 items-center text-muted-foreground">
                 <Icon v-if="item.icon" :icon="item.icon" :width="14" :height="14" />
@@ -377,12 +377,12 @@ const trafficProgressStyle = computed(() => ({
 
         <CardX
           title="系统信息" size="small"
-          class="group h-full backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 transition-all rounded-lg ring-1 ring-foreground/[0.06] shadow-sm glass-hover-blur"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
         >
           <div class="gap-3 grid grid-cols-1 sm:grid-cols-2">
             <div
               v-for="item in systemInfo" :key="item.label"
-              class="min-w-0 flex flex-col gap-1 rounded-sm bg-[#f1ead9] p-2"
+              class="min-w-0 flex flex-col gap-1 rounded-xl bg-[#f1ead9] p-2"
             >
               <div class="flex gap-1 items-center text-muted-foreground">
                 <Icon v-if="item.icon" :icon="item.icon" :width="14" :height="14" />
@@ -403,12 +403,12 @@ const trafficProgressStyle = computed(() => ({
 
         <CardX
           title="存储信息" size="small"
-          class="group h-full backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 transition-all rounded-lg ring-1 ring-foreground/[0.06] shadow-sm glass-hover-blur"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
         >
           <div class="gap-3 grid grid-cols-3">
             <div
               v-for="item in storageInfo" :key="item.label"
-              class="min-w-0 flex flex-col gap-1 rounded-sm bg-[#f1ead9] p-2"
+              class="min-w-0 flex flex-col gap-1 rounded-xl bg-[#f1ead9] p-2"
             >
               <div class="flex gap-1 items-center text-muted-foreground">
                 <Icon v-if="item.icon" :icon="item.icon" :width="14" :height="14" />
@@ -421,7 +421,7 @@ const trafficProgressStyle = computed(() => ({
 
         <CardX
           title="网络信息" size="small"
-          class="group h-full backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 transition-all rounded-lg ring-1 ring-foreground/[0.06] shadow-sm glass-hover-blur"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
           content-class="pt-0"
         >
           <div class="gap-3 grid grid-cols-2">
@@ -444,7 +444,7 @@ const trafficProgressStyle = computed(() => ({
                 </span>
               </div>
             </div>
-            <div class="min-w-0 flex flex-col gap-1 rounded-sm bg-[#f1ead9] p-2">
+            <div class="min-w-0 flex flex-col gap-1 rounded-xl bg-[#f1ead9] p-2">
               <div class="flex gap-1 items-center text-muted-foreground">
                 <Icon icon="icon-park-outline:dashboard-one" :width="14" :height="14" />
                 <span class="text-xs sm:text-sm">网络速率</span>

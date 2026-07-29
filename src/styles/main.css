@@ -366,3 +366,81 @@ header,
   opacity: 0.06;
   mix-blend-mode: normal;
 }
+
+/* ===== AC decorative + layout extras ===== */
+.ac-footer-wave {
+  background: url('/src/assets/img/footer/footer-sea.svg') center bottom / cover no-repeat;
+  height: 64px;
+}
+.ac-leaf-corner {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  width: 34px;
+  height: 34px;
+  background: url('/src/assets/img/icons/icon-leaf.png') center / contain no-repeat;
+  opacity: .85;
+  transform: rotate(18deg);
+  pointer-events: none;
+  z-index: 2;
+}
+.relative-ac > :first-child {
+  position: relative;
+}
+[data-section="cache"]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(circle, var(--accent) 0.6px, transparent 0.6px);
+  background-size: 18px 18px;
+  opacity: .25;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* top optimizer pill for HomeView view controls */
+.ac-option-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  background: #fbf7ee;
+  color: #725d42;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-hard-sm);
+  transition: transform .12s ease, box-shadow .12s ease;
+  cursor: pointer;
+}
+.ac-option-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 5px 5px 0 0 var(--border);
+}
+.ac-option-pill[aria-pressed="true"] {
+  background: var(--primary);
+  color: #002e2b;
+  border-color: var(--primary);
+}
+
+/* ===== HomeView section + leaf accent ===== */
+.home-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: .03em;
+  color: var(--foreground);
+}
+.home-section-title::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: url('/src/assets/img/icons/icon-leaf.png') center / contain no-repeat;
+  transform: rotate(12deg);
+}

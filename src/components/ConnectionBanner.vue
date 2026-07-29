@@ -7,8 +7,6 @@ import { useNodesStore } from '@/stores/nodes'
 const appStore = useAppStore()
 const nodesStore = useNodesStore()
 
-// connectionError 表示轮询已失败（WS 和 POST 模式下数据都停更）；
-// reconnecting 时轮询仍在兜底，仅提示实时通道中断
 const banner = computed(() => {
   if (appStore.loading)
     return null
@@ -42,12 +40,10 @@ const banner = computed(() => {
     <div v-if="banner" class="fixed top-3.5 inset-x-0 z-50 flex justify-center pointer-events-none">
       <div
         class="pointer-events-auto flex items-center gap-1.5 h-7 px-3 rounded-full text-xs backdrop-blur-xl shadow-sm ring-1 whitespace-nowrap"
-        :class="banner.tone === 'error'
-          ? 'bg-red-500/15 text-red-600 ring-red-500/20'
-          : 'bg-amber-500/15 text-amber-600 ring-amber-500/20'"
+        :class="banner.tone==='error'?'bg-error/15 text-error ring-error/20':'bg-warning/15 text-awesome ring-warning/20'"
         role="status"
       >
-        <Icon :icon="banner.icon" width="13" height="13" :class="banner.tone === 'warn' && 'animate-spin'" />
+        <Icon :icon="banner.icon" width="13" height="13" :class="banner.tone==='warn' && 'animate-spin'" />
         {{ banner.text }}
       </div>
     </div>
