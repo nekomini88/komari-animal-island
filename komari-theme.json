@@ -1,10 +1,10 @@
 {
   "name": "Komari Emerald",
-  "short": "Emerald",
+  "short": "animal-island",
   "description": "An emerald theme for Komari",
   "version": "1.29.0",
-  "author": "Riddle & Tokinx",
-  "url": "https://github.com/R1ddle1337/komari-theme-emerald",
+  "author": "Nekomini",
+  "url": "https://github.com/nekomini88/komari-animal-island",
   "preview": "preview.png",
   "configuration": {
     "type": "managed",

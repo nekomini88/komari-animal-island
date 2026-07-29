@@ -26,7 +26,7 @@ const EMPTY_PING_BAR_COUNT = 20
 
 function getLatencyToneClass(latency: number): string {
   if (latency <= 60)
-    return 'bg-emerald-600/90'
+    return 'bg-primary/90'
   if (latency <= 100)
     return 'bg-green-400/80'
   if (latency <= 160)
@@ -38,7 +38,7 @@ function getLatencyToneClass(latency: number): string {
 
 function getLossToneClass(loss: number): string {
   if (loss <= 1)
-    return 'bg-emerald-600/90'
+    return 'bg-primary/90'
   if (loss <= 3)
     return 'bg-green-400/90'
   if (loss <= 6)

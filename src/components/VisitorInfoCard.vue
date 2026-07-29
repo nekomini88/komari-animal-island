@@ -168,7 +168,7 @@ async function fetchJson<T>(url: string, timeoutMs: number): Promise<T> {
 }
 
 // 同一会话内地理信息不会变，缓存后刷新页面零外部请求
-const GEO_CACHE_KEY = 'emerald-visitor-geo-v1'
+const GEO_CACHE_KEY = 'animal-island-geo-v1'
 
 function readGeoCache(): VisitorGeoData | null {
   try {
@@ -384,7 +384,7 @@ onMounted(async () => {
           >
           <div
             v-else
-            class="flex h-4 w-4 shrink-0 items-center justify-center rounded bg-emerald-500/10 text-emerald-600"
+            class="flex h-4 w-4 shrink-0 items-center justify-center rounded bg-primary/10 text-primary"
           >
             <Icon :icon="item.icon" :width="14" :height="14" />
           </div>

@@ -173,7 +173,7 @@ const remainingTimeValueClass = computed(() => {
     return 'text-orange-600 dark:text-orange-400'
   if (status === 'long_term')
     return 'text-muted-foreground'
-  return 'text-emerald-600 dark:text-emerald-400'
+  return .text-primary dark:text-primary.
 })
 
 const metricCards = computed<MetricCard[]>(() => {

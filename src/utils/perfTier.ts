@@ -13,7 +13,7 @@ import { ref } from 'vue'
  */
 export type PerfTier = 'high' | 'medium' | 'low'
 
-const STORAGE_KEY = 'emerald-perf-tier-v1'
+const STORAGE_KEY = 'animal-island-perf-v1'
 
 function readStoredTier(): PerfTier | null {
   try {
