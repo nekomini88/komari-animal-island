@@ -7,16 +7,10 @@ const isDark = computed(() => appStore.isDark)
 </script>
 
 <template>
-  <div
-    class="loading-cover flex items-center inset-0 justify-center fixed z-20 backdrop-blur-sm "
-    :class="isDark ? 'bg-black/50' : 'bg-white/80'"
-  >
-    <div class="flex flex-col items-center gap-3 text-foreground">
-      <span
-        class="inline-block size-7 animate-spin rounded-full border-2"
-        style="border-color: color-mix(in srgb, currentColor 18%, transparent); border-top-color: currentColor;"
-      />
-      <span class="text-sm text-muted-foreground">Loading...</span>
+  <div class="loading-cover fixed inset-0 z-20 flex items-center justify-center backdrop-blur-sm">
+    <div class="flex flex-col items-center gap-4 text-foreground">
+      <div class="loading-leaf" />
+      <p class="text-sm font-bold tracking-wide" style="color: var(--foreground)">Loading...</p>
     </div>
   </div>
 </template>

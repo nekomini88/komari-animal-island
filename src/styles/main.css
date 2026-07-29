@@ -8,221 +8,200 @@
   scrollbar-width: thin;
 }
 
-:root {
+/* ===== Animal Crossing Tokens ===== */
+:root, [data-theme="animal"] {
   --radius: 1.125rem;
-  --background: oklch(0.974 0.009 97.3);
-  --foreground: oklch(0.375 0.080 81.0);
-  --card: oklch(0.99 0.005 88);
-  --card-foreground: oklch(0.375 0.080 81.0);
-  --popover: oklch(0.99 0.005 88);
-  --popover-foreground: oklch(0.375 0.080 81.0);
-  --primary: oklch(0.729 0.041 194.7);
-  --primary-foreground: oklch(0.22 0.04 200);
-  --secondary: oklch(0.922 0.020 90.0);
-  --secondary-foreground: oklch(0.375 0.080 81.0);
-  --muted: oklch(0.935 0.012 91.4);
-  --muted-foreground: oklch(0.611 0.032 88.0);
-  --accent: oklch(0.922 0.020 90.0);
-  --accent-foreground: oklch(0.375 0.080 81.0);
-  --destructive: oklch(0.560 0.078 55.7);
-  --border: oklch(0.682 0.013 90.8);
-  --input: oklch(0.682 0.013 90.8);
-  --ring: oklch(0.729 0.041 194.7);
-  --chart-1: oklch(0.729 0.041 194.7);
-  --chart-2: oklch(0.685 0.143 105.2);
-  --chart-3: oklch(0.810 0.165 88.9);
-  --chart-4: oklch(0.560 0.078 55.7);
-  --chart-5: oklch(0.486 0.044 87.0);
-  --sidebar: oklch(0.974 0.009 97.3);
-  --sidebar-foreground: oklch(0.375 0.080 81.0);
-  --sidebar-primary: oklch(0.729 0.041 194.7);
-  --sidebar-primary-foreground: oklch(0.22 0.04 200);
-  --sidebar-accent: oklch(0.922 0.020 90.0);
-  --sidebar-accent-foreground: oklch(0.375 0.080 81.0);
-  --sidebar-border: oklch(0.682 0.013 90.8);
-  --sidebar-ring: oklch(0.729 0.041 194.7);
-  --warning: oklch(0.810 0.165 88.9);
-  --warning-foreground: oklch(0.22 0.04 200);
-  --success: oklch(0.685 0.143 105.2);
-  --success-foreground: oklch(0.22 0.04 200);
-  --info: oklch(0.486 0.044 87.0);
-  --info-foreground: oklch(0.22 0.04 200);
+  --radius-sm: 0.875rem;
+  --radius-lg: 1.5rem;
+
+  --background: #f6f1e1;
+  --foreground: #725d42;
+  --background-secondary: #fbf7ee;
+  --border: #c8b88a;
+  --border-light: #e6dcc4;
+
+  --card: #faf5e4;
+  --card-dashed-border: #d4c4a8;
+  --card-hover-bg: #fff9e3;
+
+  --primary: #19c8b9;
+  --primary-hover: #14b0a4;
+  --primary-foreground: #fff9e3;
+  --primary-soft: rgba(25,200,181,0.12);
+
+  --awesome: #ff7700;
+  --success: #86d67a;
+  --success-border: #6fba2c;
+  --warning: #ffdb7a;
+  --warning-border: #e0bc50;
+  --error: #e05a5a;
+  --error-border: #c0392b;
+
+  --shadow-hard: 6px 6px 0 0 #c8b88a;
+  --shadow-hard-sm: 4px 4px 0 0 #c8b88a;
+  --shadow-hard-md: 8px 8px 0 0 #c8b88a;
+  --shadow-inset: inset 0 2px 4px rgba(114,93,66,0.18);
+
   --font-sans: 'Nunito', 'Noto Sans SC', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'Roboto Mono', monospace;
 }
 
 .dark {
-  --background: oklch(0.22 0.01 60);
-  --foreground: oklch(0.935 0.012 91.4);
-  --card: oklch(0.28 0.012 60);
-  --card-foreground: oklch(0.935 0.012 91.4);
-  --popover: oklch(0.28 0.012 60);
-  --popover-foreground: oklch(0.935 0.012 91.4);
-  --primary: oklch(0.729 0.041 194.7);
-  --primary-foreground: oklch(0.22 0.04 200);
-  --secondary: oklch(0.32 0.012 60);
-  --secondary-foreground: oklch(0.935 0.012 91.4);
-  --muted: oklch(0.32 0.012 60);
-  --muted-foreground: oklch(0.651 0.04 90);
-  --accent: oklch(0.32 0.012 60);
-  --accent-foreground: oklch(0.935 0.012 91.4);
-  --destructive: oklch(0.560 0.078 55.7);
-  --border: oklch(0.42 0.01 60);
-  --input: oklch(0.38 0.012 60);
-  --ring: oklch(0.729 0.041 194.7);
-  --chart-1: oklch(0.729 0.041 194.7);
-  --chart-2: oklch(0.685 0.143 105.2);
-  --chart-3: oklch(0.810 0.165 88.9);
-  --chart-4: oklch(0.560 0.078 55.7);
-  --chart-5: oklch(0.486 0.044 87.0);
-  --sidebar: oklch(0.20 0.01 60);
-  --sidebar-foreground: oklch(0.935 0.012 91.4);
-  --sidebar-primary: oklch(0.729 0.041 194.7);
-  --sidebar-primary-foreground: oklch(0.22 0.04 200);
-  --sidebar-accent: oklch(0.32 0.012 60);
-  --sidebar-accent-foreground: oklch(0.935 0.012 91.4);
-  --sidebar-border: oklch(0.42 0.01 60);
-  --sidebar-ring: oklch(0.729 0.041 194.7);
-  --warning: oklch(0.79 0.16 70);
-  --warning-foreground: oklch(0.935 0.012 91.4);
-  --success: oklch(0.74 0.17 162);
-  --success-foreground: oklch(0.935 0.012 91.4);
-  --info: oklch(0.68 0.13 230);
-  --info-foreground: oklch(0.935 0.012 91.4);
+  --background: #201a14;
+  --foreground: #f6f1e1;
+  --background-secondary: #2d2519;
+  --border: #3d3325;
+  --border-light: #4a3b2c;
+
+  --card: #2d2519;
+  --card-dashed-border: #4a3b2c;
+  --card-hover-bg: #3d2e1e;
+
+  --primary: #19c8b9;
+  --primary-hover: #2cd9cc;
+  --primary-foreground: #201a14;
+  --primary-soft: rgba(25,200,181,0.18);
+
+  --awesome: #ffc078;
+  --success: #86d67a;
+  --success-border: #6fba2c;
+  --warning: #ffe08a;
+  --warning-border: #e0bc50;
+  --error: #f08181;
+  --error-border: #e05a5a;
+
+  --shadow-hard: 6px 6px 0 0 #3d3325;
+  --shadow-hard-sm: 4px 4px 0 0 #3d3325;
+  --shadow-hard-md: 8px 8px 0 0 #3d3325;
 }
 
+/* ===== theme inline map ===== */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-warning: var(--warning);
-  --color-warning-foreground: var(--warning-foreground);
-  --color-success: var(--success);
-  --color-success-foreground: var(--success-foreground);
-  --color-info: var(--info);
-  --color-info-foreground: var(--info-foreground);
   --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --font-sans: var(--font-sans);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --color-primary: var(--primary);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --radius-base: var(--radius);
 }
 
-@layer base {
-  * {
-    border-color: var(--color-border);
-  }
-
-  html {
-    font-family: var(--font-sans);
-  }
-
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: var(--font-sans);
-  }
-
-  .dark body {
-    background-color: var(--color-background);
-  }
+/* ===== Global tokens ===== */
+html {
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
 }
 
-@layer utilities {
-  .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .flex-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .flex-col-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+body {
+  @apply min-h-screen bg-background text-foreground;
 }
 
-/* Disable glass effect globally when toggled off */
-html.no-glass *,
-html.no-glass *::before,
-html.no-glass *::after {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+/* ===== Loading cover (AC leaf shimmer) ===== */
+.loading-cover {
+  background: var(--background);
+}
+.loading-leaf {
+  width: 38px;
+  height: 38px;
+  background: url('/src/assets/img/icons/icon-leaf.png') center / contain no-repeat;
+  animation: animal-leaf-float 1.8s ease-in-out infinite;
 }
 
-html.no-glass body {
-  background-image: none !important;
+/* ===== Animations ===== */
+@keyframes animal-leaf-float {
+  0%, 100% { transform: translateY(0) rotate(-6deg); }
+  50% { transform: translateY(-8px) rotate(6deg); }
+}
+@keyframes animal-bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-3px); }
+  60% { transform: translateY(-1px); }
 }
 
-/* 移动端毛玻璃降半径：动态背景本就柔和，24px 与 10px 视觉几乎无差，
-   但每帧 backdrop-filter 重算成本随半径大幅上升，手机 GPU 扛不住 */
-@media (max-width: 767px) {
-  html:not(.no-glass) .backdrop-blur-xl {
-    --tw-backdrop-blur: blur(10px);
-  }
+/* ===== Utility classes ===== */
+.ac-card {
+  background: var(--card);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hard);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.ac-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 0 var(--border);
+}
+.ac-card-dashed {
+  background: #fbf7ee;
+  border: 2px dashed var(--card-dashed-border);
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+.ac-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+  height: 40px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  border-radius: 999px;
+  border: 0;
+  color: #002e2b;
+  background: var(--primary);
+  box-shadow: var(--shadow-hard-sm);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.ac-btn:hover { transform: translateY(-1px); box-shadow: 7px 7px 0 0 var(--border); }
+.ac-btn:active { transform: translateY(2px); box-shadow: 1px 1px 0 0 var(--border); }
+.ac-btn-ghost {
+  background: transparent;
+  box-shadow: none;
+  border: 2px solid var(--border);
+  color: var(--foreground);
+}
+.ac-divider {
+  height: 14px;
+  background: url('/src/assets/img/dividers/divider-line-brown.svg') center / contain no-repeat;
+}
+.ac-divider-teal { background-image: url('/src/assets/img/dividers/divider-line-teal.svg'); }
+.ac-dots {
+  background-image: radial-gradient(circle, var(--border) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
 }
 
-/* 画质分级（html 根类由 utils/perfTier 维护，high 无类）：
-   medium 在任何宽度下降玻璃半径；low 走静态高级模式 */
-html.perf-medium:not(.no-glass) .backdrop-blur-xl,
-html.perf-low:not(.no-glass) .backdrop-blur-xl {
-  --tw-backdrop-blur: blur(10px);
+/* ===== Card polish overrides ===== */
+.card {
+  border-radius: var(--radius) !important;
 }
 
-/* low：进场过渡去 filter blur（背景已冻结，别再给 GPU 加戏） */
-html.perf-low .node-card-switch-enter-from,
-html.perf-low .node-card-switch-leave-to,
-html.perf-low .node-row-switch-enter-from,
-html.perf-low .node-row-switch-leave-to {
-  filter: none !important;
+/* ===== Status colors ===== */
+.text-awesome { color: var(--awesome); }
+.bg-awesome { background: var(--awesome); }
+
+/* ===== AC-specific overrides without changing logic ===== */
+[class*="bg-background/40"], [class*="bg-background\\/40"] {
+  background: var(--card) !important;
+}
+[class*="ring-foreground/[0.06]"], [class*="ring-foreground\\/[0.06]"] {
+  border-color: var(--border-light) !important;
+}
+[class*="shadow-sm"] {
+  box-shadow: var(--shadow-hard-sm) !important;
+}
+[class*="bg-green-600"] {
+  background: var(--success) !important;
+}
+[class*="bg-red-600"] {
+  background: var(--error) !important;
 }
 
-/* low：隐藏装饰性常驻动画——状态点波纹与大光斑漂浮层 */
-html.perf-low .animate-ping {
-  display: none;
-}
-
-html.perf-low .glass-orbs {
-  display: none;
-}
-
-/* Dynamic hover blur transition on glass cards */
-@layer utilities {
-  .glass-hover-blur {
-    transition:
-      backdrop-filter 0.3s ease,
-      -webkit-backdrop-filter 0.3s ease;
-  }
-
-  .glass-hover-blur:hover {
-    backdrop-filter: blur(32px) saturate(1.8);
-    -webkit-backdrop-filter: blur(32px) saturate(1.8);
-  }
+/* ===== Footer seaweed wave ===== */
+.ac-footer-wave {
+  background: url('/src/assets/img/footer/footer-sea.svg') center bottom / cover no-repeat;
+  height: 64px;
 }
