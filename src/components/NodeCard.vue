@@ -100,8 +100,8 @@ function hasRegion(region: string | null | undefined): boolean {
 <template>
   <CardX
     hoverable
-    class="node-card w-full cursor-pointer backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none shadow-[0_0_0_3px] shadow-transparent hover:bg-background/60 hover:shadow-slate-500/10 transition-all duration-200 rounded-lg ring-1 ring-foreground/[0.06] glass-hover-blur"
-    :class="[!props.node.online && '!shadow-red-600/20']"
+    class="node-card w-full cursor-pointer bg-card border-2 border-border-light transition-all duration-150 rounded-2xl"
+    
     :header-class="`max-md:px-3 max-md:py-2.5 ${isCompact ? 'md:px-3 md:py-2' : ''}`"
     :content-class="`max-md:p-3 max-md:pt-0 ${isCompact ? 'md:p-3 md:pt-0' : ''}`"
     @click="emit('click')"
@@ -111,12 +111,12 @@ function hasRegion(region: string | null | undefined): boolean {
         <DataTooltip
           placement="right"
           :content="formatUptime(props.node.uptime ?? 0)"
-          class="size-2 rounded-full" :class="[props.node.online ? 'bg-green-600' : 'bg-red-600']"
+          class="relative size-2.5" :class="props.node.online ? 'bg-success' : 'bg-error'"
           content-class="whitespace-nowrap"
         >
           <div
-            class="animate-ping absolute inset-0 rounded-full opacity-50"
-            :class="[props.node.online ? 'bg-green-600' : 'bg-red-600']"
+            class="animate-ping absolute -inset-1 rounded-full opacity-60"
+            :class="[props.node.online ? 'bg-success' : 'bg-error']"
           />
         </DataTooltip>
         <span class="text-md font-bold flex-1 min-w-0 truncate">{{ props.node.name }}</span>
@@ -218,7 +218,7 @@ function hasRegion(region: string | null | undefined): boolean {
             v-if="!props.node.online"
             class="absolute inset-0 flex flex-col gap-1 items-center justify-center z-1 text-center" aria-hidden="true"
           >
-            <div class="text-sm font-medium text-destructive">
+            <div class="text-sm font-medium text-error">
               离线{{ offlineRelative !== '-' ? ` ${offlineRelative}` : '' }}
             </div>
             <div class="text-xs text-muted-foreground">
@@ -230,11 +230,11 @@ function hasRegion(region: string | null | undefined): boolean {
             :class="[!props.node.online ? 'blur-xs opacity-60' : '']"
           >
             <div class="text-[11px] flex flex-col">
-              <div class="text-green-600 flex flex-row items-center gap-1">
+              <div class="text-success flex flex-row items-center gap-1">
                 <Icon icon="tabler:chevron-up" width="12" height="12" />
                 {{ formatBytesPerSecond(props.node.net_out ?? 0) }}
               </div>
-              <div class="text-blue-600 flex flex-row items-center gap-1">
+              <div class="text-success flex flex-row items-center gap-1">
                 <Icon icon="tabler:chevron-down" width="12" height="12" />
                 {{ formatBytesPerSecond(props.node.net_in ?? 0) }}
               </div>
@@ -278,7 +278,7 @@ function hasRegion(region: string | null | undefined): boolean {
             <div class="text-[11px] text-muted-foreground flex flex-row gap-3 max-md:gap-1.5 max-md:flex-wrap max-md:justify-center overflow-hidden">
               <span
                 v-for="(tag, index) in priceTags" :key="index" class="whitespace-nowrap"
-                :class="tag.tone === 'danger' ? 'text-red-500 font-medium' : tag.tone === 'warn' ? 'text-amber-500' : ''"
+                :class="tag.tone === 'danger' ? 'text-error font-medium' : tag.tone === 'warn' ? 'text-awesome' : ''"
               >
                 {{ tag.text }}
               </span>

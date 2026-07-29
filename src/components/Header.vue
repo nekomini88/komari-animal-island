@@ -140,7 +140,7 @@ const sitename = computed(() => appStore.publicSettings?.sitename || 'Komari Mon
   >
     <div class="px-4 flex-between h-14 max-w-[1280px] mx-auto">
       <div class="flex items-center gap-3 cursor-pointer" @click="router.push('/')">
-        <Avatar class="size-8">
+        <Avatar class="size-8 ring-2 ring-border-light shadow-hard-sm">
           <AvatarImage :src="siteFavicon" :alt="sitename" />
           <AvatarFallback>{{ sitename.slice(0, 1) }}</AvatarFallback>
         </Avatar>

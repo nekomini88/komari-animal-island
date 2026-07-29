@@ -95,6 +95,7 @@ onUnmounted(() => {
 <template>
   <Provider>
     <Background />
+    <div class="ac-bg-dots" aria-hidden="true" />
     <div v-if="appStore.enableGlassEffect" class="glass-orbs" aria-hidden="true">
       <div class="glass-orb glass-orb-1" />
       <div class="glass-orb glass-orb-2" />

@@ -218,7 +218,7 @@ onMounted(async () => {
         <CardX
           v-if="cardType === 'memory'"
           hoverable
-          class="group h-full backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 ring-1 ring-foreground/[0.06] shadow-sm rounded-lg transition-all glass-hover-blur"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:-translate-y-1 hover:shadow-hard"
           :class="getCardPositionClass(idx)"
           content-class="h-full !p-3"
         >
@@ -250,7 +250,7 @@ onMounted(async () => {
         <CardX
           v-else-if="cardType === 'disk'"
           hoverable
-          class="group h-full backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 ring-1 ring-foreground/[0.06] shadow-sm rounded-lg transition-all glass-hover-blur"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:-translate-y-1 hover:shadow-hard"
           :class="getCardPositionClass(idx)"
           content-class="h-full !p-3"
         >
@@ -285,7 +285,7 @@ onMounted(async () => {
         >
           <CardX
             hoverable
-            class="group h-full backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 ring-1 ring-foreground/[0.06] shadow-sm rounded-lg transition-all glass-hover-blur"
+            class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:-translate-y-1 hover:shadow-hard"
             content-class="h-full !p-3" @click="openFinanceCard = !openFinanceCard"
           >
             <div class="flex h-full flex-col justify-between gap-1">
@@ -373,7 +373,7 @@ onMounted(async () => {
         <CardX
           v-else-if="cardType === 'traffic'"
           hoverable
-          class="group backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 ring-1 ring-foreground/[0.06] shadow-sm rounded-lg transition-all glass-hover-blur"
+          class="group bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:-translate-y-1 hover:shadow-hard"
           :class="getCardPositionClass(idx)"
           content-class="h-full !p-3"
         >
@@ -411,7 +411,7 @@ onMounted(async () => {
         <CardX
           v-else-if="cardType === 'speedUp'"
           hoverable
-          class="group backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 ring-1 ring-foreground/[0.06] shadow-sm rounded-lg transition-all glass-hover-blur"
+          class="group bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:-translate-y-1 hover:shadow-hard"
           :class="getCardPositionClass(idx)"
           content-class="h-full !p-3"
         >
@@ -440,7 +440,7 @@ onMounted(async () => {
         <CardX
           v-else-if="cardType === 'speedDown'"
           hoverable
-          class="group backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 ring-1 ring-foreground/[0.06] shadow-sm rounded-lg transition-all glass-hover-blur"
+          class="group bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:-translate-y-1 hover:shadow-hard"
           :class="getCardPositionClass(idx)"
           content-class="h-full !p-3"
         >
@@ -471,7 +471,7 @@ onMounted(async () => {
         <CardX
           v-else-if="cardType === 'connections'"
           hoverable
-          class="group backdrop-blur-xl backdrop-saturate-150 bg-background/40 border-none hover:bg-background/60 ring-1 ring-foreground/[0.06] shadow-sm rounded-lg transition-all glass-hover-blur"
+          class="group bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:-translate-y-1 hover:shadow-hard"
           :class="getCardPositionClass(idx)"
           content-class="h-full !p-3"
         >
