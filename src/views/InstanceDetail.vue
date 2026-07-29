@@ -327,7 +327,7 @@ const trafficProgressStyle = computed(() => ({
         </div>
       </div>
 
-      <div class="px-4 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div class="instance-title text-base sm:text-lg mb-3 px-4 grid grid-cols-2 gap-4 lg:grid-cols-4">
         <CardX
           v-for="item in metricCards" :key="item.label" hoverable size="small"
           class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
