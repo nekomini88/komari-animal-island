@@ -303,9 +303,9 @@ const trafficProgressStyle = computed(() => ({
           >
           <span>{{ data.name }}</span>
         </div>
-        <Badge :variant="data.online ? 'default' : 'destructive'" class="text-xs !rounded">
+        <span :class="data.online ? 'online-pill' : 'offline-pill'">
           {{ data.online ? '在线' : '离线' }}
-        </Badge>
+        </span>
         <div class="ml-auto flex items-center gap-1">
           <span v-if="currentIndex > -1" class="text-xs text-muted-foreground mr-1">
             {{ currentIndex + 1 }} / {{ orderedNodes.length }}

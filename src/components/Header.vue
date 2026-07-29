@@ -140,12 +140,15 @@ const sitename = computed(() => appStore.publicSettings?.sitename || 'Komari Mon
   >
     <div class="px-4 flex-between h-14 max-w-[1280px] mx-auto">
       <div class="flex items-center gap-3 cursor-pointer" @click="router.push('/')">
-        <Avatar class="size-8 ring-2 ring-border-light shadow-hard-sm">
+        <Avatar class="size-8 ring-2 ring-border-light shadow-hard-sm overflow-visible">
           <AvatarImage :src="siteFavicon" :alt="sitename" />
           <AvatarFallback>{{ sitename.slice(0, 1) }}</AvatarFallback>
         </Avatar>
-        <h3 class="m-0 text-lg font-semibold">
+        <h3 class="m-0 text-lg font-bold tracking-tight flex items-center gap-2">
           {{ sitename }}
+          <span class="inline-block size-4 opacity-80" aria-hidden="true">
+            <img src="/src/assets/img/icons/icon-leaf.png" class="w-full h-full" alt="leaf" />
+          </span>
         </h3>
       </div>
       <TooltipProvider :delay-duration="200">

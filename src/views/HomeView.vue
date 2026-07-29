@@ -205,7 +205,7 @@ function getNodeItemTransitionStyle(index: number): Record<string, string> {
         <Tabs v-model="appStore.nodeSelectedGroup" class="w-full flex-col gap-4">
           <div class="flex gap-2 items-center flex-nowrap">
             <div class="min-w-0 flex-1 overflow-x-auto rounded-sm pointer-events-none">
-              <TabsList class="w-max h-8 backdrop-blur-xl backdrop-saturate-150 bg-background/40 rounded-lg ring-1 ring-foreground/[0.06] shadow-sm pointer-events-auto">
+              <TabsList class="w-max h-8 bg-card border-2 border-border-light rounded-full p-1 shadow-hard-sm pointer-events-auto">
                 <TabsTrigger
                   v-for="g in allTabs" :key="g.name" :value="g.name"
                   class="h-8 flex-none shrink-0 text-xs border-2 border-transparent rounded-full data-[state=active]:text-primary data-[state=active]:shadow-hard-sm font-bold"
@@ -246,7 +246,7 @@ function getNodeItemTransitionStyle(index: number): Record<string, string> {
                 <div class="absolute top-0 right-0 ">
                   <Input
                     v-model="appStore.nodeSearchText" placeholder="搜索节点名称、地区、系统"
-                    class="transition-all w-8 h-8 rounded-full border-2 border-transparent bg-background/60 focus:!w-60 focus:!pl-8 focus:!shadow-hard hover:border-border"
+                    class="transition-all w-8 h-8 rounded-full border-2 border-transparent bg-card hover:border-border focus:!w-60 focus:!pl-8 focus:!shadow-hard"
                     :class="[appStore.nodeSearchText ? '!w-60 !pl-7.5 !pr-7 !bg-background/60' : '']"
                   />
                   <Icon
