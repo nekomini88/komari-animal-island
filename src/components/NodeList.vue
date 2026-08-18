@@ -207,7 +207,7 @@ function filterByTag(tag: string) {
           v-for="(node, index) in sortedNodes"
           :key="getRowTransitionKey(node)"
           class="group flex flex-col relative h-14 justify-center px-2 cursor-pointer bg-card rounded-xl transition-all"
-          :class="[!node.online && '!shadow-red-600/10']"
+          :class="[!node.online && '!shadow-error/10']"
           :style="getRowTransitionStyle(index)"
           @click="handleClick(node)"
         >
@@ -423,7 +423,7 @@ function filterByTag(tag: string) {
         v-for="(node, index) in sortedNodes"
         :key="getRowTransitionKey(node)"
         class="relative p-2.5 cursor-pointer bg-background/30 rounded-lg backdrop-blur-xl shadow-[0_0_0_2px] shadow-transparent active:bg-background/60 transition-all"
-        :class="[!node.online && '!shadow-red-600/10']"
+        :class="[!node.online && '!shadow-error/10']"
         :style="getRowTransitionStyle(index)"
         @click="handleClick(node)"
       >

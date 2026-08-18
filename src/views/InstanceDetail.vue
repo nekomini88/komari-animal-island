@@ -359,9 +359,10 @@ const trafficProgressStyle = computed(() => ({
       <div class="px-4 gap-4 grid grid-cols-1 lg:grid-cols-2">
         <CardX
           title="硬件信息" size="small"
-          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard relative-ac"
         >
-          <div class="gap-3 grid grid-cols-3">
+          <div class="ac-divider-leaf mb-3" />
+          <div class="gap-3 grid grid-cols-3 relative">
             <div
               v-for="(item, index) in hardwareInfo" :key="item.label"
               class="min-w-0 flex flex-col gap-1 rounded-xl bg-[#f1ead9] p-2" :class="!index && 'col-span-3'"
@@ -377,9 +378,10 @@ const trafficProgressStyle = computed(() => ({
 
         <CardX
           title="系统信息" size="small"
-          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard relative-ac"
         >
-          <div class="gap-3 grid grid-cols-1 sm:grid-cols-2">
+          <div class="ac-divider-leaf mb-3" />
+          <div class="gap-3 grid grid-cols-1 sm:grid-cols-2 relative">
             <div
               v-for="item in systemInfo" :key="item.label"
               class="min-w-0 flex flex-col gap-1 rounded-xl bg-[#f1ead9] p-2"
@@ -403,9 +405,10 @@ const trafficProgressStyle = computed(() => ({
 
         <CardX
           title="存储信息" size="small"
-          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard relative-ac"
         >
-          <div class="gap-3 grid grid-cols-3">
+          <div class="ac-divider-leaf mb-3" />
+          <div class="gap-3 grid grid-cols-3 relative">
             <div
               v-for="item in storageInfo" :key="item.label"
               class="min-w-0 flex flex-col gap-1 rounded-xl bg-[#f1ead9] p-2"
@@ -421,10 +424,11 @@ const trafficProgressStyle = computed(() => ({
 
         <CardX
           title="网络信息" size="small"
-          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard"
+          class="group h-full bg-card border-2 border-border-light rounded-2xl transition-all hover:bg-card-hover-bg hover:shadow-hard relative-ac"
           content-class="pt-0"
         >
-          <div class="gap-3 grid grid-cols-2">
+          <div class="ac-divider-leaf mb-3" />
+          <div class="gap-3 grid grid-cols-2 relative">
             <div class="relative min-w-0 overflow-hidden rounded-sm bg-[#f1ead9] p-2">
               <div
                 v-if="hasTrafficLimit"
